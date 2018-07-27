@@ -1,0 +1,258 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Mellenes Kruzes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--cookies-->
+    <script>
+
+        var fruits = [""];
+        document.getElementById("Grozs").innerHTML = Grozs;
+
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=\HTML2";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
+    </script>
+    <!-- Menu -->
+
+    <style>
+        #KruzuIzklasts {
+            display: flex;
+        }
+
+
+        #KruzesArejais {
+            display: none;
+
+        }
+
+        #KruzPogas {
+            width: 7rem;
+            height: auto;
+        }
+
+        #KruzesArejais {
+            width: 370px;
+
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        #MenuUl {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+
+            top: 0;
+        }
+
+        #Menuli {
+            float: left;
+        }
+
+        #Menuli a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #Menuli a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: rgb(0, 136, 214);
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+    var fruits = [""];
+    document.getElementById("Grozs").innerHTML = Grozs;
+</script>
+    <!-- MENU -->
+    <ul id="MenuUl">
+        <li id="Menuli">
+            <a class="active" href="Home.html">Home</a>
+        </li>
+        <li id="Menuli">
+            <a href="Contacti.html">Kontakti</a>
+        </li>
+    </ul>
+
+    <div id="KruzuIzklasts">
+
+
+
+        <div class="KruzeKruze">
+            <script> 
+                $(document).ready(function () {
+                    $("img.animate-1").click(function () {
+                        $("div.Kruzes-1").animate({ width: 'toggle' });
+                    });
+                });
+
+            </script>
+            <img id="KruzPogas" src="pogbilde1.jpg" alt="PogBilde1" class="animate-1">
+        </div>
+
+        <div id="KruzesArejais" class="Kruzes-1" style="border: thin solid black" width="18rem">
+            <div id="karuselis">
+                <div id="carouselControls-1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde1.jpg" alt="First slide" width="100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde2.jpg" alt="Second slide" width="100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde3.jpg" alt="Third slide" width="100" height="500">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselControls-1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselControls-1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="KruzInfo">
+                <h5 class="C-title">Kruzes Nosaukums Sheit</h5>
+                <p class="card-text">Kruzes apraksts sheit</p>
+                <button onclick="PirktKruzi1()"> Pievienot sho kruzi Grozam </button>
+                <script>
+                    function PirktKruzi1() {
+                        Grozs.push(" Kruzes1 Nosaukums; Kruzes1 Cena ");
+                        document.getElementById("Grozs").innerHTML = Grozs;
+                    }
+                </script>
+            </div>
+        </div>
+
+
+        <div class="KruzeKruze">
+            <script> 
+                $(document).ready(function () {
+                    $("img.animate-2").click(function () {
+                        $("div.Kruzes-2").animate({ width: 'toggle' });
+                    });
+                });
+
+            </script>
+            <img id="KruzPogas" src="pogbilde1.jpg" alt="PogBilde1" class="animate-2">
+        </div>
+        <div id="KruzesArejais" class="Kruzes-2" style="border: thin solid black" width="18rem">
+            <div id="karuselis">
+                <div id="carouselControls-2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde1.jpg" alt="First slide" width="100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde2.jpg" alt="Second slide" width="100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="KaruKruze" class="d-block w-100" src="piemerbilde3.jpg" alt="Third slide" width="100" height="500">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselControls-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselControls-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="KruzInfo">
+                <h5 class="C-title">Kruzes Nosaukums Sheit</h5>
+                <p class="card-text">Kruzes apraksts sheit</p>
+                <button onclick="PirktKruzi2()"> Pievienot sho kruzi Grozam </button>
+                <script>
+                    function PirktKruzi2() {
+                        Grozs.push(" Kruzes2 Nosaukums; Kruzes2 Cena ");
+                        document.getElementById("Grozs").innerHTML = Grozs;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div>
+            <p> Grozs:</p>
+            <p id="Grozs"></p>
+            <button onclick="NotiritGrozusFunction()">Iznemt kruzi no groza</button>
+            <script>
+                function NotiritGrozusFunction() {
+                    Grozs.pop();
+                    document.getElementById("Grozs").innerHTML = Grozs;
+                }
+            </script>
+        </div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
